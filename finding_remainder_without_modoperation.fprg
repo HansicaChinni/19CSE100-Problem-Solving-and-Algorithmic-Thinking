@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22019"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:04:33 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAxOTsyMDIyMjNNQVlDMDA1NjsyMDIyLTExLTA0OzEwOjM0OjA5IEFNOzMzMTY="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAxOTsyMDIyMjNNQVlDMDA1NjsyMDIyLTExLTA0OzExOjA0OjMzIEFNOzM7MzQyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="In this program,we find the value of remainder in a division operation without using the mod operation."/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <comment text="here,'m' is the dividend "/>
+            <output expression="&quot;enter the value of dividend m&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <comment text="here,'n' is the divisor"/>
+            <output expression="&quot;enter the value of divisor n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <comment text="here,'q' is the quotient"/>
+            <assign variable="q" expression="m/n"/>
+            <output expression="&quot;the value of quotient q is&quot;" newline="True"/>
+            <output expression="q" newline="True"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <comment text="here,'r' is the remainder"/>
+            <comment text="The division algorithm from which this formula is derived is &quot;dividend=divisor*quotient+remainder&quot;"/>
+            <assign variable="r" expression="m-(n*q)"/>
+            <output expression="&quot;the value of remainder r is&quot;" newline="True"/>
+            <output expression="r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="cb.en.u4cys22019"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:06:32 AM"/>
+        <attribute name="created" value="Y2IuZW4udTRjeXMyMjAxOTsyMDIyMjNNQVlDMDA1NjsyMDIyLTExLTA0OzEwOjI1OjExIEFNOzMzMDk="/>
+        <attribute name="edited" value="Y2IuZW4udTRjeXMyMjAxOTsyMDIyMjNNQVlDMDA1NjsyMDIyLTExLTA0OzExOjA2OjMyIEFNOzM7MzQyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The aim of this program is to swap the values of two variables without using a third variable "/>
+            <declare name="m" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the value of variable m&quot;" newline="True"/>
+            <input variable="m"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter value of variable n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="mathematical operations to swap the values of the variables"/>
+            <assign variable="m" expression="m+n"/>
+            <assign variable="n" expression="m-n"/>
+            <assign variable="m" expression="m-n"/>
+            <output expression="&quot;the new value of m is&quot;" newline="True"/>
+            <comment text="new value of m = value of m after the operation"/>
+            <output expression="m" newline="True"/>
+            <output expression="&quot;the new value of n is&quot;" newline="True"/>
+            <comment text="new value of n = value of n after the operation"/>
+            <output expression="n" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
