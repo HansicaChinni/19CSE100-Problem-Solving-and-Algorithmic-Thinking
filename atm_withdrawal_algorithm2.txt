@@ -1,0 +1,20 @@
+ALGORITHM FOR CASH WITHDRAWAL FROM AN ATM
+1.Start
+2.Declare variables name, account number, amount, pin, balance.
+3.print “name is”
+4.read name
+5.print ”accountnumber is”
+6.read accountnumber
+7.print “please enter the balance”
+8.read balance
+9.if balance>500 , then 
+                  i.print “amount to be withdrawn is”
+                  ii.read amount
+                  9.1) if pin=3793, then
+                  i.print “please collect your cash”
+                  ii.print “thank you”
+                  9.2) else 
+                  i.print ”incorrect pin” 
+                  ii.print “transaction cancelled”
+10.else print ”withdrawal not possible due to insufficient balance ”
+11.Stop.

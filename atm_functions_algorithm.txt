@@ -1,0 +1,69 @@
+1.Start
+2.print “Welcome to SBI ATM”
+3.declare variable, option, minimumbalance, pin, amount, balance, depositcash, accountnumber, OTP, newpin, reenterednewpin.
+4.assign minimumbalance=500
+5.assign balance=500000
+6.print “please enter your name”
+7.read name
+8.print “please enter your account number”
+9.read accountnumber
+10.print “please select an option”
+11.print “1) cash withdrawal”
+12.print “2) cash deposit”
+13.print ”3) pin change”
+14.print “4) balance enquiry”
+15.read option
+16.if option=1 then 
+                    16.1)if balance>=minimumbalance then,
+                                                       i.print “please enter the amount to be withdrawn”
+                                                       ii. read amount
+                            16.1a if amount<=balance then,
+                                                        i. print “please enter your pin”
+                                                        ii. Read pin 
+                                                      b. If pin=3793 then, 
+                                                       i. print “please collect your cash”
+                                                       ii .print “thank you”
+                                                       Else,
+                                                       i. print “incorrect pin”
+                                                       ii.Print “transaction cancelled”
+                                                       Else, 
+                                                        print “cash withdrawal not possible due to insufficient balance”                                                         
+                                        else, print “withdrawal of cash is not possible"
+17.else, 
+       If option=2 then,
+       i. ”please enter amount of cash being deposited”
+       ii. read depositcash
+       iii. print "please place your cash in the case provided"
+       iv. print "cash deposit has been completed"
+18. Else
+            If option=3 then 
+            i.print "Please enter your pin"
+            ii. read pin
+            18.1) If pin=3793 then
+                    i. Print "enter the OTP sent to your mobile number xxxxxx789"
+                    ii. Read OTP
+                   iii. print "Please enter new pin"
+                    iv. read newpin
+                    v. print "re-enter new pin"
+                    vi. read reenterednewpin
+                    a)If newpin = reenterednewpin then
+                    i. Print "your pin has been changed successfully"
+                    Else 
+                      i.print "both pin do not match"
+                      ii.print "operation failed”
+                Else
+                      i.print "incorrect pin"
+                     ii.print "operation failed”                                          
+19.Else
+                If option=4 then, 
+                  i.Print "Please enter your pin"
+                  ii.read pin
+                  a) If pin=3793 then
+                       i.print "your account balance is"
+                        ii.print balance
+                    Else
+                       i.print "incorrect pin"
+                      ii.print "operation failed”
+20.Stop
+    
+    
