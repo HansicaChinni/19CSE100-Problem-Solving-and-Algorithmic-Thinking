@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Delhivery"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 11:57:32 PM"/>
+        <attribute name="created" value="RGVsaGl2ZXJ5O0RWLUxULVMtMTY4OTc7MjAyMi0xMi0wMjswNzowODoxMCBQTTszMDE0"/>
+        <attribute name="edited" value="RGVsaGl2ZXJ5O0RWLUxULVMtMTY4OTc7MjAyMi0xMi0wMjswNzoxODo1NiBQTTsxOzMxMzM="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIyLTEyLTAyOzExOjU3OjMyIFBNOzQ7MjQxOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The aim of this program is to find the prime numbers less than a given number."/>
+            <declare name="number, i, n" type="Integer" array="False" size=""/>
+            <declare name="prime" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Please enter the number&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="number" start="2" end="n" direction="inc" step="1">
+                <assign variable="prime" expression="true"/>
+                <for variable="i" start="2" end="number-1" direction="inc" step="1">
+                    <comment text="For a number to be prime, it should be divisible only by 1 and itself"/>
+                    <if expression="number % i ==0">
+                        <then>
+                            <assign variable="prime" expression="false"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="prime == true">
+                    <then>
+                        <output expression="number" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

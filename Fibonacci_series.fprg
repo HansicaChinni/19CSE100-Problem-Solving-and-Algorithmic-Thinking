@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Delhivery"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 11:55:06 PM"/>
+        <attribute name="created" value="RGVsaGl2ZXJ5O0RWLUxULVMtMTY4OTc7MjAyMi0xMi0wMjswNjozNjo0MyBQTTszMDIw"/>
+        <attribute name="edited" value="RGVsaGl2ZXJ5O0RWLUxULVMtMTY4OTc7MjAyMi0xMi0wMjswNzoxOTo1MiBQTTsyOzMxMzE="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIyLTEyLTAyOzExOjU1OjA2IFBNOzQ7MjQxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="FIBONACCI SERIES"/>
+            <declare name="a, b, c, k, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter the value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="a,b,c,k are the variables used to indicate numbers in the fibonacci series"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="1"/>
+            <assign variable="k" expression="1"/>
+            <while expression="k&lt;=n">
+                <for variable="k" start="1" end="n" direction="inc" step="1">
+                    <assign variable="c" expression="a+b"/>
+                    <output expression="a &amp; &quot; + &quot; &amp; b &amp; &quot; = &quot; &amp;c" newline="True"/>
+                    <assign variable="a" expression="b"/>
+                    <assign variable="b" expression="c"/>
+                </for>
+            </while>
+            <comment text="This is the fibonacci series"/>
+        </body>
+    </function>
+</flowgorithm>
