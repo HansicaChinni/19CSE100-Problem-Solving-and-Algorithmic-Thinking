@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hansi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:08:12 PM"/>
+        <attribute name="created" value="aGFuc2k7SEFOU0lDQTsyMDIyLTEyLTA5OzA2OjQwOjE3IFBNOzIzMTQ="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIyLTEyLTA5OzExOjA4OjEyIFBNOzU7MjQyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This programme is used to find the frequency of an element in an array"/>
+            <declare name="n, frequency" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter the value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="array" type="Integer" array="True" size="n"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <assign variable="frequency" expression="0"/>
+            <output expression="&quot;please enter the elements of the array&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="array[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                    <if expression="array[i]=array[j]">
+                        <then>
+                            <assign variable="frequency" expression="frequency+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="&quot;the frequency of the element &quot; &amp; array[i] &amp; &quot;is&quot; &amp; array[i]&amp; &quot;~&quot; &amp;frequency" newline="True"/>
+                <assign variable="frequency" expression="0"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

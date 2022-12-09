@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="S.RAMESH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 11:08:39 PM"/>
+        <attribute name="created" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTA6MjM6MjYgQU07Mjg5OA=="/>
+        <attribute name="edited" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTA6MzQ6NDQgQU07MTtQQVZBTjtDVVNDVVRBOzIwMjItMTItMDk7MDk6MjM6NDEgQU07bnN0dWRlbnRzIG1hcmtzIHN5c3RlbS5mcHJnOzgwNjI="/>
+        <attribute name="edited" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTA6NDM6MTYgQU07MjszMDA4"/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIyLTEyLTA5OzExOjA4OjM5IFBNOzY7MjQzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="The aim of this programme is to provide basic information of a student."/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;please enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="mark" type="Real" array="True" size="n"/>
+            <declare name="mark1" type="Integer" array="True" size="n"/>
+            <declare name="mark2" type="Integer" array="True" size="n"/>
+            <declare name="mark3" type="Integer" array="True" size="n"/>
+            <declare name="mark4" type="Integer" array="True" size="n"/>
+            <declare name="mark5" type="Integer" array="True" size="n"/>
+            <declare name="average" type="Integer" array="True" size="n"/>
+            <declare name="total" type="Integer" array="True" size="n"/>
+            <declare name="rollno" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the value of rollno of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="rollno[i]"/>
+                <output expression="&quot;enter the value of mark1 of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="mark1[i]"/>
+                <output expression="&quot;enter the value of mark2 of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="mark2[i]"/>
+                <output expression="&quot;enter the value of mark3 of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="mark3[i]"/>
+                <output expression="&quot;enter the value of mark4 of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="mark4[i]"/>
+                <output expression="&quot;enter the value of mark5 of student&quot;&amp;i+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="mark5[i]"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="total[i]" expression="mark1[i]+mark2[i]+mark3[i]+mark4[i]+mark5[i]"/>
+                <assign variable="average[i]" expression="total[i]/5"/>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Rollno&quot;&amp;&quot;=&quot;&amp;rollno[i]" newline="True"/>
+                <output expression="&quot;mark= &quot;" newline="False"/>
+                <output expression="&quot;&quot;&amp;mark1[i]&amp;&quot; ,&quot;" newline="False"/>
+                <output expression="&quot;&quot;&amp;mark2[i]&amp;&quot; ,&quot;" newline="False"/>
+                <output expression="&quot;&quot;&amp;mark3[i]&amp;&quot; ,&quot;" newline="False"/>
+                <output expression="&quot;&quot;&amp;mark4[i]&amp;&quot; ,&quot;" newline="False"/>
+                <output expression="mark5[i]" newline="True"/>
+                <output expression="&quot;total&quot;&amp;&quot;=&quot;&amp;total[i]" newline="True"/>
+                <output expression="&quot;average&quot;&amp;&quot;=&quot;&amp;average[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
