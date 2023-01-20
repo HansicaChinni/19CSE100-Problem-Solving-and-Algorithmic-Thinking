@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22019"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 01:52:26 PM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxOTsyMDIyMjNNQVlDMDA1NTsyMDIzLTAxLTIwOzA5OjE3OjA3IEFNOzMwNjQ="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxOTsyMDIyMjNNQVlDMDA1NTsyMDIzLTAxLTIwOzExOjEwOjQ1IEFNOzE7MzE2MA=="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTIwOzAxOjUyOjI2IFBNOzE7MjQxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program is used to sort unorganised data."/>
+            <declare name="index, n, i, minimum, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter value of n&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="numbers" type="Integer" array="True" size="n"/>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;enter the value of number&quot;&amp; &quot;[&quot;&amp; j&amp; &quot;]&quot;" newline="True"/>
+                <input variable="numbers[j]"/>
+            </for>
+            <for variable="index" start="0" end="n-2" direction="inc" step="1">
+                <comment text="Two loops are used for searching and sorting."/>
+                <for variable="i" start="index+1" end="n-1" direction="inc" step="1">
+                    <if expression="numbers[index]&gt;numbers[i]">
+                        <then>
+                            <assign variable="minimum" expression="numbers[index]"/>
+                            <assign variable="numbers[index]" expression="numbers[i]"/>
+                            <assign variable="numbers[i]" expression="minimum"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="j" start="0" end="n-1" direction="inc" step="1">
+                <output expression="numbers[j]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
