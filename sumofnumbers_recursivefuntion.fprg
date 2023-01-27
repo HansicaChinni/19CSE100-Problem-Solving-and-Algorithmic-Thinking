@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hansi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:02:07 PM"/>
+        <attribute name="created" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA2OjUzOjIyIFBNOzIzMTM="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA5OjAyOjA3IFBNOzI7MjQyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sum, number, Totalsum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the value of number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="sum" expression="Totalsum(number)"/>
+            <output expression="&quot;The sum of the first &quot;&amp;number &amp;&quot; natural numbers is &quot; &amp;sum" newline="True"/>
+        </body>
+    </function>
+    <function name="Totalsum" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <if expression="number==1">
+                <then>
+                    <assign variable="sum" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="sum" expression="Totalsum(number-1)+number"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

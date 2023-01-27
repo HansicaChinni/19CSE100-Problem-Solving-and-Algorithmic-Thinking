@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hansi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:01:09 PM"/>
+        <attribute name="created" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA3OjA1OjAwIFBNOzIzMDc="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA5OjAxOjAxIFBNOzE7aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA3OjA3OjU1IFBNO2ZpYm9uYWNjaV9zZXJpZXNfcmVjdXJzaXZlX2Z1bmN0aW9uLmZwcmc7OTA0NA=="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA5OjAxOjA5IFBNOzM7MjQyNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number, fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the value of number&quot;" newline="True"/>
+            <input variable="number"/>
+            <assign variable="fact" expression="Factorial(number)"/>
+            <output expression="&quot;The value of factorial of &quot;&amp; number &amp; &quot; is &quot; &amp;fact" newline="True"/>
+        </body>
+    </function>
+    <function name="Factorial" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fact" type="Integer" array="False" size=""/>
+            <if expression="number=1">
+                <then>
+                    <assign variable="fact" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="fact" expression="Factorial(number-1)*number"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

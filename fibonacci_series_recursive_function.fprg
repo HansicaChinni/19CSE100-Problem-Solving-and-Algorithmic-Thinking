@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hansi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:00:44 PM"/>
+        <attribute name="created" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA3OjA3OjU1IFBNOzIzMTk="/>
+        <attribute name="edited" value="aGFuc2k7SEFOU0lDQTsyMDIzLTAxLTI3OzA5OjAwOjQ0IFBNOzY7MjQyNQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fibb, number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter the value of number&quot;" newline="True"/>
+            <input variable="number"/>
+            <output expression="&quot;The required fibonacci series is &quot;" newline="True"/>
+            <assign variable="fibb" expression="Fibonacci(number)"/>
+        </body>
+    </function>
+    <function name="Fibonacci" type="Integer" variable="a">
+        <parameters>
+            <parameter name="number" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="a, b, c, index" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="1"/>
+            <assign variable="index" expression="1"/>
+            <if expression="number=0">
+                <then/>
+                <else>
+                    <assign variable="a" expression="0"/>
+                    <assign variable="b" expression="1"/>
+                    <while expression="index&lt;=number">
+                        <assign variable="c" expression="a+b"/>
+                        <output expression="a &amp;&quot; + &quot; &amp;b&amp;&quot; = &quot; &amp;c" newline="True"/>
+                        <assign variable="a" expression="b"/>
+                        <assign variable="b" expression="c"/>
+                        <assign variable="index" expression="index+1"/>
+                    </while>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
